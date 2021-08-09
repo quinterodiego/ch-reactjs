@@ -1,8 +1,5 @@
 import React from 'react';
 import CartWidget from './CartWidget';
-import ItemListContainer from './ItemListContainer';
-
-const saludo = "Bienvenido a mi proyecto!";
 
 const NavBar = () => {
 
@@ -25,10 +22,8 @@ const NavBar = () => {
                 </div>
                 <CartWidget />
             </nav>
-            <ItemListContainer greeting = { saludo }/>
         </>
     );
-
 }
 
 export default NavBar;

@@ -1,11 +1,13 @@
 import React from 'react';
+import Item from './Item';
 
-const saludo = "Bienvenido a mi proyecto!";
-
-class ItemListContainer extends React.Component {
-    render() {
-        return <h2 className="text-center p-5">{ saludo }</h2>;
-    }
+const ItemListContainer = ({ titulo }) => {
+    return (
+        <>
+            <h2 className="text-center p-5">{ titulo }</h2>
+            <Item />
+        </>
+    );
 }
 
 export default ItemListContainer;
