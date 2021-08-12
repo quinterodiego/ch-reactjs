@@ -6,10 +6,10 @@ const divStyle = {
 }
 
 
-const Item = ({ id, title, description, price, pictureUrl }) => {
+const Item = ({ title, description, price, pictureUrl }) => {
     return (
         <>
-            <div className="card text-center m-auto" style={divStyle} key={id}>
+            <div className="card text-center m-auto" style={divStyle}>
                 <img className="card-img-top" src={ pictureUrl } alt="Card image cap"></img>
                 <div className="card-body">
                     <h5 className="card-title">{ title }</h5>

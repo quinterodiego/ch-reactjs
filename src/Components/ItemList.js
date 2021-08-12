@@ -20,7 +20,7 @@ const ItemList = () => {
     }, [])
 
     const renderizaLista = () => {
-        return products.map(p => <Item id={p.id} title={p.title} description={p.description} price={p.price} pictureUrl={p.pictureUrl} />)
+        return products.map(p => <Item key={p.id} title={p.title} description={p.description} price={p.price} pictureUrl={p.pictureUrl} />);
     }
 
     return (
