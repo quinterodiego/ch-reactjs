@@ -1,5 +1,6 @@
 import NavBar from "./NavBar";
 import ItemListContainer from './ItemListContainer';
+import ItemDetailContainer from "./ItemDetailContainer";
 
 const titulo = "Lista de Items";
 
@@ -8,6 +9,7 @@ const App = () => {
         <>
             <NavBar />
             <ItemListContainer titulo = { titulo }/>
+            <ItemDetailContainer />
         </>
     );
 }
