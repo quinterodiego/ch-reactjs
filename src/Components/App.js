@@ -1,15 +1,10 @@
-import NavBar from "./NavBar";
-import ItemListContainer from './ItemListContainer';
-import ItemDetailContainer from "./ItemDetailContainer";
-
-const titulo = "Lista de Items";
+import Router from './../Router/Router';
+import './../Assets/index.css';
 
 const App = () => {
     return (
         <>
-            <NavBar />
-            <ItemListContainer titulo = { titulo }/>
-            <ItemDetailContainer />
+            <Router />
         </>
     );
 }

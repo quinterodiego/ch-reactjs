@@ -1,24 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import productos from './../Apis/productos';
-import ItemDetail from './ItemDetail';
+import categorias from '../Apis/categorias';
 
 const getItems = () => {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
-            resolve(productos);
+            resolve(categorias);
         }, 500)
     });
 }
 
-const ItemDetailContainer = () => {
+const Categorias = () => {
 
-    const [ item, setItem ] = useState([]);
-    const { idItem } = useParams();
+    const [ categoria, setCategoria ] = useState([]);
+    const { idCategoria } = useParams();
 
     useEffect(() => {
         getItems()
-            .then(data => setItem(data[Number(idItem) - 1]));
+            .then(data => setCategoria(data[Number(idCategoria) - 1]));
     }, []);
 
     const Renderiza = () => {
@@ -26,8 +25,7 @@ const ItemDetailContainer = () => {
             <div className="row mt-5">
                 <div className="col-md-5"></div>
                 <div className="col-md-2 text-center">
-                    <h3>Detalle de Item</h3>
-                    <ItemDetail pictureUrl={item.pictureUrl} title={item.title} price={item.price} description={item.description} />
+                    <h3>{categoria.name}</h3>
                 </div>
                 <div className="col-md-5"></div>
             </div>
@@ -41,4 +39,4 @@ const ItemDetailContainer = () => {
     );
 }
 
-export default ItemDetailContainer;
+export default Categorias;
