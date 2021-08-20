@@ -18,7 +18,7 @@ const Categorias = () => {
     useEffect(() => {
         getItems()
             .then(data => setCategoria(data[Number(idCategoria) - 1]));
-    }, []);
+    }, [idCategoria]);
 
     const Renderiza = () => {
         return (
