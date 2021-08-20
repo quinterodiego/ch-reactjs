@@ -27,7 +27,7 @@ const ItemDetailContainer = () => {
                 <div className="col-md-5"></div>
                 <div className="col-md-2 text-center">
                     <h3>Detalle de Item</h3>
-                    <ItemDetail pictureUrl={item.pictureUrl} title={item.title} price={item.price} description={item.description} />
+                    <ItemDetail pictureUrl={item.pictureUrlDetail} title={item.title} price={item.price} description={item.description} />
                 </div>
                 <div className="col-md-5"></div>
             </div>
